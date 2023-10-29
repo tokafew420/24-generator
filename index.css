@@ -3,6 +3,11 @@
     src: url('/font/Playball-Regular.ttf') format('truetype');
 }
 
+html,
+body {
+    min-width: 440px;
+}
+
 .navbrand-icon {
     text-decoration: none;
 }
