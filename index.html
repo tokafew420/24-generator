@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Genshin Impact Tools</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="description" content="24 Generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=0.25, maximum-scale=5.0">
+
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar bg-body-tertiary d-print-none mb-3">
+        <div class="container-fluid container-lg">
+            <a class="navbar-brand">24 Generator</a>
+            <form class="d-flex" role="print">
+                <button id="print-btn" class="btn btn-outline-primary" type="button"><i class="bi bi-printer me-2"></i>Print</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container-fluid container-lg">
+        <div class="row d-print-none">
+            <div class="col-md-6 mb-3">
+                <div class="row">
+                    <div class="col mb-3">
+                        <label class="form-label fw-bold">Operations</label>
+                        <div>
+                            <div class="form-check form-switch form-check-inline">
+                                <input class="form-check-input" type="checkbox" role="switch" id="has-addition-chk" checked />
+                                <label class="form-check-label" for="has-addition-chk"><i class="bi bi-plus-lg text-primary me-2"></i>Addition</label>
+                            </div>
+                            <div class="form-check form-switch form-check-inline">
+                                <input class="form-check-input" type="checkbox" role="switch" id="has-subtraction-chk" checked />
+                                <label class="form-check-label" for="has-subtraction-chk"><i class="bi bi-dash-lg text-primary me-2"></i>Subtraction</label>
+                            </div>
+                            <div class="form-check form-switch form-check-inline">
+                                <input class="form-check-input" type="checkbox" role="switch" id="has-multiplication-chk" />
+                                <label class="form-check-label" for="has-multiplication-chk"><i class="bi bi-x-lg text-primary me-2"></i></i>Multiplication</label>
+                            </div>
+                            <div class="form-check form-switch form-check-inline">
+                                <input class="form-check-input" type="checkbox" role="switch" id="has-division-chk" />
+                                <label class="form-check-label" for="has-division-chk"><span class="text-primary me-2" style="font-size: 1.5em; line-height: .9em;">&divide;</span>Division</label>
+                            </div>
+                        </div>
+                        <div class="form-text">Pick the math operators needed to solve the card.</div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 mb-3">
+                        <label for="number-of-cards" class="form-label fw-bold">Number of Cards</label>
+                        <input id="number-of-cards" type="number" class="form-control" aria-describedby="number-of-cards-txt" min="1" max="40" value="4" />
+                        <div class="form-text" id="number-of-cards-txt">How many cards to you want to create.</div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="col-12 col-sm-6 mb-3">
+                        <label for="max-number" class="form-label fw-bold">Max Number</label>
+                        <input id="max-number" type="number" class="form-control" aria-describedby="max-number-txt" min="20" max="99" value="20" />
+                        <div class="form-text" id="max-number-txt">Pick the largest number to use within a card.</div>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <button id="play-btn" class="btn btn-success w-100" type="button"><i class="bi bi-play me-2"></i>Play</button>
+            </div>
+        </div>
+        <hr class="d-print-none" />
+        <div class="game-cards">
+        </div>
+    </div>
+    <template id="game-card-tmpl">
+        <div class="col-12 col-md-6 mb-3 text-center">
+            <div class="game-card position-relative">
+                <img src="" />
+                <div class="card-numbers">
+                    <div class="card-number card-number-1"></div>
+                    <div class="card-number card-number-2"></div>
+                    <div class="card-number card-number-3"></div>
+                    <div class="card-number card-number-4"></div>
+                </div>
+            </div>
+        </div>
+    </template>
+</body>
+
+</html>

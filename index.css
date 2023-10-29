@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Playball';
+    src: url('/font/Playball-Regular.ttf') format('truetype');
+}
+
+
+
+.card-numbers {
+    font-family: 'Playball';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 7rem;
+    line-height: 1em;
+}
+
+.card-number {
+    color: #212529 !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%);
+    padding-bottom: 60px;
+}
+
+.card-number.double-digit {
+    font-size: 5.5rem;
+    padding-bottom: 70px;
+}
+
+.card-number.nine-digit {
+    text-decoration: underline;
+    text-decoration-color: #e21c5e;
+    text-decoration-thickness: 4px
+}
+
+.card-number.card-number-2 {
+    transform: translate(-50%, -100%) rotate(90deg);
+}
+
+.card-number.card-number-3 {
+    transform: translate(-50%, -100%) rotate(180deg);
+}
+
+.card-number.card-number-4 {
+    transform: translate(-50%, -100%) rotate(270deg);
+}
+
+@page {
+    size: 'auto';
+    /* this affects the margin in the printer settings */
+    margin: 18mm 0mm 0mm 0mm;
+}
+
+@media print {
+    .game-cards .row>div:first-child {
+        padding-right: 0;
+    }
+
+    .game-cards .row>div:last-child {
+        padding-left: 0;
+    }
+
+    .game-card {
+        transform: scale(.9);
+    }
+}
