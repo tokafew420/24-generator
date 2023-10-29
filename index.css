@@ -3,7 +3,18 @@
     src: url('/font/Playball-Regular.ttf') format('truetype');
 }
 
+.navbrand-icon {
+    text-decoration: none;
+}
 
+.navbrand-title {
+    color: #212529;
+    font-family: 'Playball';
+    font-size: 32px;
+    text-decoration: none;
+    vertical-align: middle;
+
+}
 
 .card-numbers {
     font-family: 'Playball';

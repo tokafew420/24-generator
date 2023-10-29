@@ -10,9 +10,9 @@
         maxNumber: 20
     };
     const cardImgs = [
-        './24-card-1.svg',
-        './24-card-2.svg',
-        './24-card-3.svg'
+        './img/24-card-1.svg',
+        './img/24-card-2.svg',
+        './img/24-card-3.svg'
     ];
     const random = (min, max) => {
         min = Math.ceil(min);
